@@ -27,11 +27,4 @@ function dict_entries -d "Print all entries from a k/v paired list seperated by 
   for idx in (seq 1 2 (count $argv))
     printf '%s::%s\n' $argv[$idx] $argv[(math $idx + 1)]
   end
-  return
 end
-
-set -l dict_test \
-  "a" "b" \
-  "c" "d" \
-  "e" "f" \
-  "g" "h"
