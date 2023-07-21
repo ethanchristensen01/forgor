@@ -1,10 +1,12 @@
-# set -a commands "SUBCOMMAND" "DESCRIPTION"
+# set -l subcommand path change-extension '' (status basename)
 
-# function forgor_SUBCOMMAND
-#   ...COMMANDS
+# set -a commands $subcommand "Command description"
+
+# function forgor_$subcommand
+#   echo "Testing testing 123!"
 # end
 
-# Maybe later...
-# function forgor_complete_SUBCOMMAND
-#   complete -c forgor -n "__fish_seen_subcommand_from SUBCOMMAND" -f ...
+# Future autocomplete support
+# function forgor_complete_$subcommand
+#   complete -c forgor -n "__fish_seen_subcommand_from $subcommand" -f ...
 # end
