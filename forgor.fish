@@ -39,8 +39,10 @@ function _help -a subcommand -d "Print human readable list of subcommands"
 end
 
 function forgor
-  set -l subcommand $argv[1]
+  set -l subcommand "$argv[1]"
   switch $subcommand
+      case ""
+        _help
       case "help" "-h" "--help"
         _help $argv[2]
       case "_completions"
